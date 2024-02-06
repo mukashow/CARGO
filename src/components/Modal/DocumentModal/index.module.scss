@@ -1,0 +1,155 @@
+.form > * {
+  margin-bottom: 16px;
+
+  @media (max-width: 1440px) {
+    margin-bottom: 8px;
+  }
+}
+
+.textLabel {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #232323;
+}
+
+.textArea {
+  margin-top: 4px;
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0B6BE6;
+}
+
+.fileLabel {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #232323;
+}
+
+.fileFake {
+  min-height: 42px;
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 10px 16px;
+
+  @media (max-width: 1440px) {
+    padding: 8px;
+  }
+}
+
+.fileFakeIndicator {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0B6BE6;
+  cursor: pointer;
+
+  &[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .icon {
+    margin-right: 6px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-top: 40px;
+
+  @media (max-width: 1440px) {
+    margin-top: 24px;
+  }
+}
+
+.button {
+  background: #0B6BE6;
+  border-radius: 4px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  padding: 0 20px;
+  outline: none;
+  border: 0;
+  margin-top: 24px;
+}
+
+.fileTile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  span {
+    font: $r-12;
+    color: #232323;
+    margin-left: 6px;
+    margin-right: auto;
+    word-break: break-all;
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid #232323;
+    }
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress {
+  display: flex;
+  overflow: hidden;
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, .4);
+  width: 50%;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    transition: .2s;
+    background: #0b6be6;
+    margin-left: 0;
+    animation: 3s linear 0s progress infinite;
+  }
+}
+
+.requirements {
+  display: grid;
+  gap: 4px;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 24px;
+  color: $Red_CHC;
+  font: $r-12;
+}

@@ -1,0 +1,19 @@
+.grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: $Gray_CHC;
+  padding: 20px;
+}
+.title{
+  margin-top: 10px;
+  font: $r-14;
+}

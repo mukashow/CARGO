@@ -1,0 +1,16 @@
+.modal {
+  display: grid;
+  gap: 16px;
+
+  @media (max-width: 1440px) {
+    gap: 8px;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 90px auto;
+  justify-content: space-between;
+  gap: 50px;
+}

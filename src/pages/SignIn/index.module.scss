@@ -1,0 +1,134 @@
+.root{
+  display: grid;
+  grid-template-columns: 7.9fr 9.6fr;
+  gap: clamp(40px, 10vw, 166px);
+  padding: 82px 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.wrapperContent {
+  max-width: 480px;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.title {
+  color: $Green_CHC;
+  font: $r-28;
+}
+
+.wrapperLanguage {
+  position: relative;
+}
+
+.wrapperLanguageValue {
+  font: $r-16;
+  color: $Black_CHC;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.wrapperLanguageIcon{
+  margin-left: 4px;
+  color: $Blue_CHC;
+}
+.wrapperLanguageDropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  box-shadow: $shadow-2;
+  background-color: $White_CHC;
+  z-index: 1;
+}
+
+.wrapperLanguageDropdownItem {
+  padding: 8px 14px;
+  cursor: pointer;
+  &:hover{
+    background-color: $Gray_CHC;
+  }
+}
+
+.box {
+  background-color: $White_CHC;
+  box-shadow: $shadow-10;
+  border-radius: 4px;
+  padding: 40px 34px;
+
+}
+
+.control {
+  margin-bottom: 16px;
+}
+
+.label {
+  font: $r-12;
+  color: $Black_CHC;
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.input {
+  height: 40px;
+  border: 1px solid $Gray_CHC_2;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  padding: 0 16px;
+  font: $r-14;
+}
+.inputError{
+  border-color: $Red_CHC;
+  color: $Red_CHC;
+}
+.inputErrorMessage{
+  font:$r-14;
+  color: $Red_CHC;
+}
+.errorMessage{
+  background-color: rgba($LightRed_CHC, 0.4);
+  padding: 10px;
+  border-radius: 4px;
+  font: $r-14;
+}
+.button {
+  background-color: $Blue_CHC;
+  font: $r-20;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $White_CHC;
+  border-radius: 4px;
+  padding: 0 20px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  margin-top: 24px;
+
+  &:hover {
+    background-color: $Blue_CHC_H;
+  }
+}

@@ -1,0 +1,16 @@
+.root {
+  margin: auto;
+  display: flex;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &.small {
+    min-height: 250px;
+
+    img {
+      width: 140px;
+    }
+  }
+}

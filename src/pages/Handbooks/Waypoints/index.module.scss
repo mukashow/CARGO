@@ -1,0 +1,43 @@
+.modal {
+  display: grid;
+  gap: 16px;
+
+  @media (max-width: 1440px) {
+    gap: 8px;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 90px auto;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.table {
+  tbody td:nth-child(2) p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  td {
+    padding-bottom: clamp(6px, 0.6vw, 17px) !important;
+    padding-top: clamp(6px, 0.6vw, 17px) !important;
+  }
+}
+
+.dropdownTables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+
+  table {
+    min-width: auto;
+
+    td {
+      padding-bottom: clamp(6px, 0.8vw, 10px) !important;
+      padding-top: clamp(6px, 0.8vw, 10px) !important;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.top {
+  padding: 16px;
+  margin-bottom: 74px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1440px) {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}

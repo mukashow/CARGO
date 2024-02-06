@@ -1,0 +1,90 @@
+.content {
+  padding: 40px 30px 40px 40px;
+
+  @media (max-width: 1440px) {
+    padding: 24px;
+  }
+}
+
+.formWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 402px));
+  gap: 40px;
+
+  @media (max-width: 1440px) {
+    gap: 16px;
+  }
+
+  &.manager .card {
+    min-height: 508px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.information {
+  margin-top: 24px;
+}
+
+.selectsWrap {
+  width: 100%;
+
+  & > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.selectWrap {
+  position: relative;
+  width: 100%;
+}
+
+.selectType {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 6px;
+
+  p {
+    font: $r-12;
+    color: #FFFFFF;
+    border-radius: 4px;
+    background: #BDBDBD;
+    padding: 3px 6px;
+    cursor: pointer;
+
+    &[data-active="true"] {
+      background: #0B6BE6;
+    }
+  }
+}
+
+main[style="padding-bottom: 0px;"] {
+  .footer {
+    padding-bottom: 24px;
+
+    @media (max-width: 1440px) {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
+  gap: 12px;
+  padding-top: 24px;
+}

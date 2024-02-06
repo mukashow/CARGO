@@ -1,0 +1,54 @@
+.label {
+  display: block;
+}
+
+.wrapperSelect {
+  position: relative;
+}
+
+.labelText {
+  font: $r-12;
+  color: $Black_CHC;
+  margin-bottom: 4px;
+}
+
+.select {
+  height: 40px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  padding: 0 20px 0 8px;
+  width: 100%;
+  border: 1px solid #BDBDBD;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  font: $r-12;
+
+  &.thin {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 15px;
+    height: 35px
+  }
+}
+
+.selectDisabled {
+  background-color: $White_CHC2;
+}
+
+.icon {
+  color: #828282;
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+
+.error {
+  font: $r-12;
+  color: $Red_CHC;
+}

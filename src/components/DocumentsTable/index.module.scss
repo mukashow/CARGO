@@ -1,0 +1,48 @@
+.table {
+  th:nth-child(2) {
+    min-width: 120px;
+  }
+
+  th:nth-child(4) {
+    min-width: 200px
+  }
+
+  th:nth-child(5) {
+    min-width: auto;
+  }
+}
+
+.comment {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.commentToggle {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 130%;
+  color: #0B6BE6;
+  font-style: italic;
+  display: flex;
+  justify-content: right;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+.commentDropdown {
+  padding: 12px 16px;
+  font: $r-12;
+  font-style: italic;
+  line-height: 130%;
+  color: #232323;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  white-space: break-spaces;
+  z-index: 10;
+}

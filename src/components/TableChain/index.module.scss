@@ -1,0 +1,95 @@
+.root {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.chain {
+  display: flex;
+  align-items: center;
+
+  &:nth-child(4n + 1) .mark {
+    background: $Red_CHC;
+  }
+
+  &:nth-child(4n + 2) .mark {
+    background: $Green_CHC;
+  }
+
+  &:nth-child(4n + 3) .mark {
+    background: $Blue_CHC;
+  }
+
+  &:nth-child(4n + 4) .mark, &:last-child .mark {
+    background: $Orange_CHC;
+  }
+}
+
+.chainTitle {
+  font: $r-12;
+  color: $Black_CHC;
+  max-width: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.mark {
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: $t-16;
+  color: white;
+  margin-right: 4px;
+  text-transform: uppercase;
+}
+
+.dots {
+  height: 20px;
+  width: 30px;
+  font-size: 14px;
+  color: $Blue_CHC_H2;
+  background: #C2DCFE;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 4px;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+
+.chainDetail {
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 12px 14px;
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  z-index: 2;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  margin-top: 12px;
+
+  & > div {
+    display: grid;
+    gap: 6px;
+    font: $r-12;
+
+    span {
+      &:first-child {
+        color: $Green_CHC
+      }
+
+      &:last-child{
+        color: $Blue_CHC
+      }
+    }
+  }
+}

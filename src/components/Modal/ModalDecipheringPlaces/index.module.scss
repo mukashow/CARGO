@@ -1,0 +1,82 @@
+.table {
+  min-width: auto;
+
+  thead {
+    height: auto;
+    border: none;
+
+    tr {
+      background: transparent;
+    }
+
+    th {
+      padding: 0 0 4px 0;
+      width: 250px;
+      min-width: auto;
+      color: $Gray_4;
+      text-transform: uppercase;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-align: left;
+
+      &:first-child {
+        min-width: 200px;
+        padding-left: 0;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: auto;
+      border-bottom: none;
+    }
+
+    td {
+      padding: 8px 0;
+      font: $r-12;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .icon {
+      margin-right: 30px;
+    }
+
+    .th {
+      position: relative;
+      display: block;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $Gray_4;
+      font-size: 11px;
+
+      & ~ span {
+        position: absolute;
+        top: calc(100% - 8px);
+        left: 0;
+
+        &:last-child {
+          top: calc(100% + 8px);
+        }
+      }
+    }
+  }
+
+  .total {
+    td {
+      padding: 24px 0 0 0;
+      font-weight: 500;
+    }
+
+    &[data-islessrow="true"] {
+      td {
+        padding: 56px 0 0 0;
+      }
+    }
+  }
+}

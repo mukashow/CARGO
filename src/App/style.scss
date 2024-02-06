@@ -1,0 +1,6 @@
+.__react_component_tooltip{
+    padding: 10px !important;
+    &:after{
+         z-index: -1 !important;
+     }
+}

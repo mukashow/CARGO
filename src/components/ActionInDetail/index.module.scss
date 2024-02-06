@@ -1,0 +1,33 @@
+.root {
+  position: relative;
+}
+
+.icons {
+  background: $Gray_6;
+  border-radius: 4px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin-bottom: 16px;
+
+  @media (max-width: 1440px) {
+    height: 35px;
+    padding: 0 16px;
+  }
+
+  & > div:not(:last-child) {
+    margin-right: 30px;
+
+    @media (max-width: 1440px) {
+      margin-right: 24px;
+    }
+  }
+}
+
+.button {
+  font-size: 16px;
+  padding: 0 18px;
+  color: $Orange_CHC;
+}

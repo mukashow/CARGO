@@ -1,0 +1,106 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  &.active {
+    .card {
+      border-color: #B6F6DE;
+    }
+
+    .cardTitle {
+      background: #B6F6DE;
+    }
+  }
+
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.rootTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  span {
+    line-height: 24px;
+    color: $Gray_CHC_2;
+  }
+}
+
+.card {
+  background: white;
+  border: 1px solid $LightBlue_CHC2;
+  border-radius: 4px;
+  padding: 40px 30px;
+  flex-grow: 1;
+
+  &.cardThin {
+    padding: 12px 30px;
+  }
+
+  @media (max-width: 1440px) {
+   padding: 24px;
+  }
+}
+
+.informationRoot {
+  display: grid;
+  gap: 8px;
+}
+
+.informationRow {
+  display: flex;
+  font: $r-14;
+  color: $Black_CHC;
+
+  &.spaceBetween {
+    justify-content: space-between;
+  }
+
+  .informationTitle {
+    margin-right: 3px;
+  }
+
+  .cardValue {
+    font-weight: 500;
+  }
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  @media (max-width: 1440px) {
+    margin-bottom: 10px;
+  }
+}
+
+.button {
+  color: #0B6BE6;
+  font-size: 14px;
+  padding: 10px;
+  margin-right: -10px;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+
+  span {
+    padding: 1px 4px;
+    border-radius: 4px;
+    background: #E5F2FF;
+    font-size: 14px;
+    color: #232323;
+  }
+}

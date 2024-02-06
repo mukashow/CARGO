@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 6;
+  padding: 0 2px;
+
+  & > p:not(:last-child) {
+    margin-right: 30px;
+
+    @media (max-width: 1440px) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.tabItem {
+  font: $r-20;
+  color: $Gray_CHC_3;
+  padding-bottom: 6px;
+  position: relative;
+  cursor: pointer;
+
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  &.active {
+    color: white;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 8px;
+      width: 100%;
+      background: $Orange_CHC;
+      border-radius: 0 0 4px 4px;
+      position: absolute;
+      bottom: -8px;
+
+      @media (max-width: 1440px) {
+        height: 6px;
+        bottom: -6px;
+      }
+    }
+  }
+}

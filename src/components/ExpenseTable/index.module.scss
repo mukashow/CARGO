@@ -1,0 +1,16 @@
+.expensesTable {
+  @media (min-width: 1440px) {
+    th, td {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+
+  th:first-child {
+    width: 200px;
+  }
+
+  th:nth-child(3) {
+    width: 300px;
+  }
+}

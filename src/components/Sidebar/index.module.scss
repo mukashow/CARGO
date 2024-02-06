@@ -1,0 +1,16 @@
+.root {
+  width: 250px;
+  box-shadow: 0 4px 32px rgba(136, 152, 170, 0.15);
+  flex-shrink: 0;
+
+  @media (max-width: 1440px) {
+    width: 210px;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow: auto;
+}

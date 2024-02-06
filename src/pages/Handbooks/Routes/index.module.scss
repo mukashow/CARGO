@@ -1,0 +1,43 @@
+.modal {
+  margin: -8px;
+
+  & > div {
+    padding: 8px;
+  }
+}
+
+.field {
+  display: flex;
+  align-items: flex-start;
+
+  & > div:last-child, & > div:nth-last-child(2) {
+    height: 40px;
+  }
+}
+
+.fieldLabel {
+  font: $r-12;
+  color: #232323;
+  margin-bottom: 4px;
+}
+
+.dropBtn {
+  padding: 0 20px;
+  height: 40px;
+  cursor: move;
+  margin-left: -20px;
+}
+
+.footer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 90px auto;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.tableWrap {
+  table {
+    min-width: auto;
+  }
+}

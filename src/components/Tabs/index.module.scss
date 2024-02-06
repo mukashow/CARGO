@@ -1,0 +1,101 @@
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(370px, 500px));
+  gap: 40px;
+  margin-bottom: 30px;
+
+  @media (max-width: 1600px) {
+    grid-template-columns: repeat(auto-fill, minmax(370px, 467px));
+    gap: 16px;
+  }
+
+  &.alone {
+    grid-template-columns: minmax(370px, 467px) 1fr;
+    align-items: start;
+  }
+}
+
+.root {
+  padding: 20px 20px 24px 24px;
+  background: $White_CHC2;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (max-width: 1600px) {
+    padding: 16px;
+  }
+
+  &.nonActive {
+    opacity: .4;
+  }
+
+  &.active .icon {
+    transform: rotate(90deg);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  color: $Blue_CHC;
+  margin-right: 12px;
+  transition: .15s;
+}
+
+.title {
+  font: $r-20;
+  color: $Black_CHC;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1600px) {
+    font-size: 16px;
+  }
+}
+
+.tags {
+  margin-top: 19px;
+  margin-left: -5px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1600px) {
+    margin: -3px;
+  }
+
+  @media (max-width: 1600px) {
+    margin-top: 16px;
+  }
+
+  & > div {
+    background: white;
+    border-radius: 4px;
+    margin: 5px;
+    font: $r-14;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+
+    @media (max-width: 1600px) {
+      margin: 3px;
+    }
+  }
+}
+
+.tagIcon {
+  margin-left: 4px;
+
+  & + div {
+    display: none;
+  }
+
+  &:hover + div {
+    display: block;
+  }
+}

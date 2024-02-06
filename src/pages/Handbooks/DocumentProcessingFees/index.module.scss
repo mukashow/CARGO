@@ -1,0 +1,33 @@
+.percentage {
+  background: #F2F2F2;
+  border-radius: 4px;
+  padding: 9px 16px;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  p {
+    font: $r-14;
+    color: #232323;
+    margin-right: auto;
+  }
+}
+
+.modal {
+  display: grid;
+  gap: 16px;
+
+  @media (max-width: 1440px) {
+    gap: 8px;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 90px auto;
+  justify-content: space-between;
+  gap: 50px;
+}

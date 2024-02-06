@@ -1,0 +1,243 @@
+.wrapper {
+  padding: 16px 16px 90px 16px;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+
+  @media (max-width: 1440px) {
+    padding: 0 0 40px;
+  }
+}
+
+.actionWrapper {
+  margin-left: auto;
+}
+
+.action {
+  background: $Gray_6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 2px 16px;
+
+  @media (max-width: 1440px) {
+    padding: 0 10px;
+  }
+}
+
+.actionButton {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &Red {
+    color: $Red_CHC;
+  }
+
+  &Green {
+    color: $Green_CHC;
+  }
+
+  &Black {
+    color: $Black_CHC;
+  }
+
+  &Blue {
+    color: $Blue_CHC;
+  }
+}
+
+.box {
+  padding: 24px;
+  background: #F5F8FF;
+  margin-top: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  max-width: 468px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.boxIcon {
+  color: #0B6BE6;
+  margin-right: 10px;
+}
+
+.boxHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.boxHeadTitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #232323;
+}
+
+.boxButton {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  background: #0B6BE6;
+  border-radius: 4px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.boxIndicator {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  height: 30px;
+  padding: 0 10px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  border: 1px solid $LightBlue_CHC2;
+  border-radius: 4px;
+  padding: 40px 30px;
+
+  @media (max-width: 1440px) {
+    padding: 24px;
+  }
+}
+
+.head {
+  margin-bottom: 24px;
+
+  @media (max-width: 1440px) {
+    margin-bottom: 16px;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: $m-14;
+  color: $Black_CHC;
+  background-color: $White_CHC2;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 4px;
+
+  @media (max-width: 1440px) {
+    height: 35px;
+  }
+}
+
+.row {
+  display: flex;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: $Blue_CHC;
+  cursor: pointer;
+}
+
+.delete {
+  position: absolute;
+  top: 0;
+  right: 32px;
+  bottom: 0;
+  color: $Red_CHC;
+  cursor: pointer;
+}
+
+.rowLabel {
+  font: $r-14;
+}
+
+.rowValue {
+  font: $m-14;
+  padding-left: 4px;
+}
+
+.formPhoneDetail {
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+}
+
+.phoneDetail {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+
+  & > *:last-child {
+    grid-column: span 2;
+  }
+}
+
+.formDocTypeDetail {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.buttons {
+  display: flex;
+  padding: 7px 0 0 10px;
+  align-self: flex-start;
+
+  .buttonCancel {
+    color: #828282;
+    margin: 0 4px;
+    cursor: pointer;
+
+  }
+
+  .buttonSuccess {
+    color: $Green_CHC;
+    margin: 0 4px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: 0;
+
+  }
+}
+
+.addRow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #004BAB;
+  margin-bottom: 16px;
+}
+
+.addRowIcon {
+  margin-right: 6px;
+}
+
+.addRowValue {
+  font: $r-12;
+}

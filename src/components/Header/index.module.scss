@@ -1,0 +1,175 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .button {
+    height: 44px;
+    font-size: 20px;
+    font-weight: normal;
+
+    @media (max-width: 1600px) {
+      height: 30px;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+
+  & > div:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  h2 {
+    color: white;
+    font-size: clamp(18px, 1.5vw, 28px);
+    font-weight: normal;
+    margin-right: clamp(16px, 2vw, 40px);
+
+    @media (max-width: 1600px) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.userIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $White_CHC;
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $Green_CHC;
+}
+
+.username {
+  font: $m-16;
+  color: $White_CHC;
+  margin-right: 12px;
+}
+
+.userRole {
+  font: $r-12;
+  line-height: 21px;
+  align-self: flex-end;
+  text-transform: uppercase;
+  color: $White_CHC;
+}
+
+.statusRoot {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+
+  @media (max-width: 1440px) {
+    margin-top: 8px;
+  }
+}
+
+.status {
+  height: 36px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+
+  @media (max-width: 1440px) {
+    height: 28px;
+  }
+}
+
+.statusTitle {
+  font: $r-12;
+  color: $Black_CHC;
+  margin-right: 10px;
+
+  & + span {
+    font: $r-14;
+  }
+}
+
+.statusName {
+  color: $Orange_CHC;
+
+  &[data-status-type="goodsAcceptance"] {
+    &[data-status="1"], &[data-status="2"], &[data-status="4"] {
+      color: $Red_CHC;
+    }
+
+    &[data-status="3"], &[data-status="6"] {
+      color: $Green_CHC_2;
+    }
+
+    &[data-status="5"], &[data-status="7"] {
+      color: $Blue_CHC_H2;
+    }
+  }
+
+  &[data-status-type="container"] {
+    &[data-status="1"] {
+      color: $Green_CHC_2;
+    }
+
+    &[data-status="2"] {
+      color: $Blue_CHC_H2;
+    }
+
+    &[data-status="3"] {
+      color: #828282;
+    }
+  }
+
+  &[data-status-type="loadingList"] {
+    &[data-status="1"], &[data-status="10"] {
+      color: $Green_CHC_2;
+    }
+
+    &[data-status="2"], &[data-status="3"], &[data-status="4"], &[data-status="5"], &[data-status="6"], &[data-status="8"], &[data-status="11"], &[data-status="13"] {
+      color: $Red_CHC;
+    }
+
+    &[data-status="7"], &[data-status="12"] {
+      color: #EE8234;
+    }
+
+    &[data-status="9"], &[data-status="14"] {
+      color: $Blue_CHC_H2;
+    }
+  }
+}
+
+.statusAuthor {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
+
+  span {
+    color: white;
+
+    &:last-child {
+      font-weight: 500;
+      margin-left: 10px;
+    }
+  }
+}

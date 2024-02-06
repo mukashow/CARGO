@@ -1,0 +1,55 @@
+.root {
+  display: flex;
+  align-items: center;
+
+  &.thin .label {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 15px;
+  }
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #009E61;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: white;
+  cursor: pointer;
+
+  &.big {
+    width: 24px;
+    height: 24px;
+  }
+
+  input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked + div {
+      display: inline-flex !important;
+    }
+  }
+}
+
+.label {
+  font: $r-12;
+  color: $Gray2_CHC;
+  margin-left: 6px;
+}
+
+.flag {
+  display: none !important;
+  width: 16px;
+  height: 16px;
+
+  &.big {
+    width: 20px;
+    height: 20px;
+  }
+}

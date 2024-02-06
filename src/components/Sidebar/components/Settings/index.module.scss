@@ -1,0 +1,185 @@
+.block {
+  background: $White_CHC2;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 10px;
+  user-select: none;
+
+  @media (max-width: 1440px) {
+    margin: 0 6px;
+  }
+
+  &.blockInLink {
+    margin: 0;
+    background: white;
+  }
+}
+
+.blockWrap {
+  padding: 10px;
+
+  @media (max-width: 1440px) {
+    padding: 10px 6px;
+  }
+}
+
+.create {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 20px;
+  cursor: pointer;
+
+  @media (max-width: 1440px) {
+    height: 50px;
+    padding: 0 6px 0 10px;
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &.opened .arrow{
+    transform: rotate(90deg);
+  }
+
+  p {
+    font: $m-16;
+  }
+}
+
+.arrow {
+  color: $Blue_CHC_H2;
+  margin-left: auto;
+  transition: .1s;
+}
+
+.createIcon {
+  color: $Blue_CHC_H2;
+  margin-right: 10px;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: $Black_CHC;
+  cursor: pointer;
+
+  svg {
+    color: $Orange_CHC;
+  }
+}
+
+.creationList {
+  display: grid;
+  gap: 8px;
+  user-select: none;
+
+  @media (max-width: 1440px) {
+    gap: 4px;
+  }
+
+  a, span {
+    color: $Blue_CHC_H2;
+    text-decoration: none;
+    padding: 6px 20px;
+    font: $r-16;
+    cursor: pointer;
+
+    @media (max-width: 1440px) {
+      padding: 4px 10px;
+      font-size: 14px;
+    }
+
+    &:not(.static):hover {
+      color: white;
+      background: $Blue_CHC;
+    }
+  }
+}
+
+.footer {
+  padding: 30px 0;
+  display: grid;
+  gap: 10px;
+
+  @media (max-width: 1440px) {
+    padding: 16px 0;
+    gap: 6px;
+  }
+}
+
+.item {
+  padding: 10px 30px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  transition: .1s;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: $Black_CHC;
+
+  @media (max-width: 1440px) {
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 15px;
+
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &.opened {
+    background: $White_CHC2;
+
+    & + .dropdown {
+      background: $White_CHC2;
+    }
+
+    .itemIcon {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:hover, &.active {
+    background: $Green_CHC;
+    color: white;
+
+    svg {
+      color: white;
+    }
+  }
+
+  .itemIcon {
+    color: $Blue_CHC_H2;
+    transition: .1s;
+  }
+}
+
+.dropdownLink {
+  display: block;
+  padding: 6px 6px 6px 64px;
+  font: $r-16;
+  color: $Black_CHC;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+
+  @media (max-width: 1440px) {
+    padding: 4px 4px 4px 37px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &:hover, &.active {
+    background: #009E61;
+    color: white;
+  }
+}

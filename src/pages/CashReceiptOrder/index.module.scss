@@ -1,0 +1,230 @@
+.detailRoot {
+  padding: 24px;
+
+  @media (min-width: 1440px) {
+    margin-top: 15px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: minmax(300px, 500px) minmax(400px, 640px);
+    gap: clamp(24px, 2vw, 40px);
+    padding: 16px;
+    margin-bottom: clamp(30px, 3vw, 70px);
+  }
+
+  .commentPart {
+    margin-top: clamp(16px, 1vw, 24px);
+    color: #232323;
+    font-size: 14px;
+    position: relative;
+
+    .title {
+      margin-bottom: 4px;
+    }
+
+    .comment {
+      font-style: italic;
+      line-height: 130%;
+
+      &.closed {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: var(--rows--);
+        line-clamp: var(--rows--);
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .toggle {
+      color: #0B6BE6;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      font-style: italic;
+      cursor: pointer;
+    }
+  }
+
+  .paymentMethodButtons {
+    display: grid;
+    column-gap: clamp(16px, 1.5vw, 30px);
+    row-gap: 16px;
+    margin-bottom: 24px;
+    grid-template-columns: 2.62fr 2.84fr;
+
+    & > div {
+      gap: 4px;
+      height: 50px;
+      padding-inline: 10px;
+
+      &:nth-child(3), &:last-child {
+        span:last-child {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.receipt {
+  font-size: 14px;
+  color: #232323;
+
+  &:not(.create) {
+    padding: 16px;
+    border-radius: 4px;
+    background: #F5F8FF;
+    display: grid;
+    gap: 16px;
+  }
+
+  .box {
+    border-radius: 4px;
+    background: #FFF;
+    padding: 16px;
+  }
+
+  &.create {
+    .box {
+      background: #F5F8FF;
+    }
+
+    .groupTitle {
+      margin-bottom: 16px;
+    }
+
+    .total {
+      display: grid;
+      grid-template-columns: 1fr 207px;
+      margin-block: 24px;
+
+      & > div {
+        display: grid;
+        gap: 4px;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .groupTitle {
+    color: #0B6BE6;
+    margin-bottom: 20px;
+  }
+
+  .inputGrid {
+    display: grid;
+    gap: 16px;
+
+    .row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      input::placeholder {
+        color: #828282;
+      }
+
+      & > div:last-child {
+        margin-top: 7px;
+
+        @media (max-width: 1440px) {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .totalTitle {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .value {
+    color: black;
+  }
+
+  .middleAmount {
+    color: #828282;
+    margin-right: 24px;
+  }
+
+  .options {
+    display: grid;
+    gap: 8px;
+  }
+
+  .option {
+    display: flex;
+
+    & > *:first-child {
+      margin-right: auto;
+    }
+  }
+}
+
+.mainGrid {
+  display: flex;
+  gap: clamp(16px, 1.6vw, 30px);
+  flex-grow: 1;
+}
+
+.creationSidebar {
+  flex-shrink: 0;
+  padding: clamp(12px, 1.2vw, 30px);
+  display: grid;
+  align-content: start;
+  justify-content: start;
+
+  .buttons {
+    display: grid;
+    gap: 20px;
+  }
+}
+
+.creationTable {
+  thead {
+    border-top: none;
+  }
+
+  th {
+    min-width: auto;
+  }
+
+  table {
+    min-width: 900px;
+  }
+
+  th:nth-child(7), th:nth-child(8) {
+    min-width: 80px;
+  }
+
+  th:nth-child(9), th:nth-child(10) {
+    min-width: 100px;
+  }
+}
+
+.filter {
+  width: 100%;
+
+  & > div {
+    margin-right: 0;
+
+    &:first-child {
+      max-width: 180px;
+    }
+
+    &:nth-child(3), &:nth-child(4) {
+      max-width: 120px;
+    }
+
+    &:nth-child(5), &:nth-child(6) {
+      max-width: 170px;
+    }
+  }
+}
+

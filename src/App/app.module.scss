@@ -1,0 +1,28 @@
+.grid {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  padding: 30px;
+  position: relative;
+  width: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1440px) {
+    width: calc(100% - 210px);
+    padding: 16px;
+  }
+
+  & > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 468px;
+    background-color: $Green_CHC;
+    z-index: -1;
+  }
+}

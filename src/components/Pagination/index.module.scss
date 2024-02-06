@@ -1,0 +1,42 @@
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.listLi {
+  margin-right: 10px;
+
+  @media (max-width: 1440px) {
+    margin-right: 6px;
+  }
+}
+
+.listLink {
+  height: 32px;
+  background: $White_CHC;
+  border: 1px solid $LightBlue_CHC;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  text-decoration: none;
+  user-select: none;
+  font: $m-14;
+  color: $Black_CHC;
+
+  &:hover {
+    background-color: $Blue_CHC;
+    color: $White_CHC;
+  }
+}
+
+.listLinkActive {
+  background-color: $Blue_CHC;
+  color: $White_CHC;
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}

@@ -1,0 +1,45 @@
+.modal {
+  .fieldsWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 24px;
+  }
+
+  .fields {
+    display: grid;
+    align-content: start;
+    gap: 16px;
+
+    @media (max-width: 1440px) {
+      gap: 8px;
+    }
+  }
+
+  .fieldWithIcon {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .fieldIcon {
+    margin-top: 18px;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 100px auto;
+    justify-content: end;
+    gap: 50px;
+  }
+}
+
+.table {
+  th:nth-child(2) {
+    min-width: 100px;
+  }
+  th:nth-child(7) {
+    min-width: 80px;
+  }
+}

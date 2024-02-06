@@ -1,0 +1,123 @@
+.modal {
+  display: grid;
+  gap: 16px;
+
+  @media (max-width: 1440px) {
+    gap: 8px;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 90px auto;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.dropdownTableHead {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  p {
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.dropdownTables {
+  display: flex;
+  overflow: auto;
+  padding: 0 24px 30px;
+
+  @media (max-width: 1440px) {
+    padding: 0 12px 16px;
+  }
+
+  @media (min-width: 1600px) {
+    & > div {
+      flex-grow: 1 !important;
+    }
+  }
+
+  & > div:not(:last-child) {
+    margin-right: 16px;
+
+    @media (max-width: 1440px) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.dropdownTableInput {
+  width: 84px;
+}
+
+.dropdownTableInputActive {
+  background: #0B6BE6;
+  border-color: #0B6BE6;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.dropdownTableInputWrap {
+  width: 84px;
+
+  &::after {
+    content: '$';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #BDBDBD;
+    cursor: text;
+  }
+}
+
+.dropdownTable {
+  th {
+    min-width: auto !important;
+  }
+
+  td:first-child {
+    max-width: none;
+  }
+
+  th:first-child, td:first-child {
+    padding-left: 12px !important;
+  }
+
+  th:last-child, td:last-child {
+    padding-right: 16px !important;
+  }
+
+  th, td {
+    padding: 0 6px !important;
+  }
+
+  tr[data-edit-mode="true"] {
+
+    td:first-child {
+      padding-left: 14px;
+    }
+
+    td:last-child {
+      padding-right: 6px;
+    }
+  }
+}
+
+.dropdownTableErrorInput {
+  & > p {
+    font-size: 11px;
+    line-height: 125%;
+  }
+}

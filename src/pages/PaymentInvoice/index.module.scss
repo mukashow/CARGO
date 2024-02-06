@@ -1,0 +1,125 @@
+.box {
+  display: flex;
+  gap: 30px;
+  height: 100%;
+  position: relative;
+
+  & > *:first-child {
+    width: 100%;
+    max-width: 450px;
+    min-width: 380px;
+    align-self: start;
+  }
+
+  @media (max-width: 1800px) {
+    flex-direction: column;
+  }
+}
+
+.goodsTableWrap {
+  border-left: 1px solid #F4F7FB;
+  padding-left: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1800px) {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.tableRoot {
+  flex-grow: 1 !important;
+
+  @media (min-width: 1801px) {
+    position: relative;
+  }
+}
+
+.table {
+  @media (min-width: 1801px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  th {
+    min-width: auto;
+    white-space: break-spaces;
+  }
+}
+
+.detailPageBox {
+  padding: 40px 25px 25px;
+}
+
+.billGoodsTable {
+ & th {
+   min-width: 80px;
+ }
+}
+
+.cardStatusGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  z-index: 1;
+
+  & > div {
+    display: grid;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .confiscateReason {
+    line-height: 20px;
+    margin: -3px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.toggle {
+  font-size: 12px;
+  color: #0B6BE6;
+  font-style: italic;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.red {
+  color: #DF3B57;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.value {
+  color: black;
+  font-size: 12px;
+  line-height: 125%;
+  max-width: 230px;
+}
+
+.confiscatedReasonDropdown {
+  min-width: 300px;
+  width: 100%;
+  padding: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
